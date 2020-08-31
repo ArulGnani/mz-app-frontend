@@ -1,0 +1,19 @@
+
+
+nav {
+    border: 2px solid navy;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li {
+    list-style-type: none;
+    font-size: 18px;
+    border: 2px solid slateblue;
+    padding: 20px;
+}
