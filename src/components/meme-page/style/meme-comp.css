@@ -3,3 +3,10 @@
     min-height: 100px;
     border: 2px solid salmon;
 }
+
+#loading {
+    padding: 20px;
+    font-size: 20px;
+    border: 2px solid gold;
+    text-align: center;
+}
