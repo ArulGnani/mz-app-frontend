@@ -84,6 +84,10 @@ export const MemeComp: React.FC = () => {
         }
     }, [])
 
+    useEffect(() => {
+        sessionStorage.setItem("memes", JSON.stringify([...memes]))
+    }, [memes])
+
     const getLatestMemes = async () => {
         await fetch("http://localhost:5000/api/get/latest/memes")
             .then(res => res.json())
@@ -92,8 +96,6 @@ export const MemeComp: React.FC = () => {
                 
                 sessionStorage.setItem("lastReqTime", new Date().getTime().toString())
                 sessionStorage.setItem("lid", data.length)
-
-                sessionStorage.setItem("memes", JSON.stringify([...memes, ...data]))
                 
                 dispatch({ 
                     type: "memePageData", 
