@@ -2,9 +2,15 @@
 main {
     border: 2px solid firebrick;
     width: 60%;
+    min-height: 100vh;
     margin: auto;
 }
 
 #body {
     margin-top: 60px;
+    border: 2px solid blueviolet;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 60%;
 }

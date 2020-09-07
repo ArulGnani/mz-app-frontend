@@ -18,7 +18,7 @@ export const App: React.FC = () => {
                 <Route exact path="/">
                     <MemesPage />    
                 </Route>
-                <Route path="/templates">
+                <Route exact path="/templates">
                     <TemplatesPage />
                 </Route>
                 <Route path="/templates/:cid/end">
