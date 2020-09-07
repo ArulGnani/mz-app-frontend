@@ -1,8 +1,11 @@
 
 header {
-    border: 2px solid rgba(20, 241, 0, 0.945);
+    position: fixed;
+    top: 0;
+    width: 60%;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0px;
     font-size: 20px;
     background: rgb(241, 193, 89);
+
 }

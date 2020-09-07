@@ -11,7 +11,7 @@ export const Layout: React.FC<Iprops> = ({ body }: Iprops) => {
     return (
         <main>
             <Header/>
-                <section>
+                <section id="body">
                     { body }
                 </section>
             <NavBar />

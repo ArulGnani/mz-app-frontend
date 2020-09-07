@@ -4,3 +4,7 @@ main {
     width: 60%;
     margin: auto;
 }
+
+#body {
+    margin-top: 60px;
+}

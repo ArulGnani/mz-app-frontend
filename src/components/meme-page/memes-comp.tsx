@@ -12,7 +12,7 @@ export const MemeComp: React.FC = () => {
     const [memes, setMemes] = useState<ImemePage[]>([])
     const [loading, setLoading] = useState(false)
     const end = useRef(false)
-
+    
     const observer = useRef<IntersectionObserver>()
     const lastRef = useCallback(node => {
 
@@ -113,9 +113,9 @@ export const MemeComp: React.FC = () => {
             { memes.map((meme, idx) => {
                 return (
                     <div ref={idx + 1 === memes.length ? lastRef : null} 
-                        key={meme.mid} >
+                        key={meme.mid}>
                         <Meme url={meme.url} mid={meme.mid} 
-                            key={meme.mid} 
+                            key={meme.mid}
                         />
                     </div>
                 ) 

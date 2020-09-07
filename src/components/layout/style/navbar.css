@@ -1,4 +1,11 @@
 
+#nav-comp {
+    position: fixed;
+    bottom: 0;
+    width: 60%;
+    background: rgb(211, 142, 51);
+}
+
 
 nav {
     border: 2px solid navy;
@@ -14,6 +21,6 @@ ul {
 li {
     list-style-type: none;
     font-size: 18px;
-    border: 2px solid slateblue;
+    border: 2px solid rgb(33, 0, 247);
     padding: 20px;
 }
