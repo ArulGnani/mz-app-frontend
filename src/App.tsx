@@ -6,7 +6,7 @@ import { MemesPage } from './components/meme-page/memes-page';
 import { TemplatesPage } from './components/templates-page/templates-page';
 import { InfoComp } from './components/info-page/info-comp';
 import { SubCategorie } from './components/templates-page/sub-categorie';
-import { Templates } from './components/templates-page/templates';
+import { Templates } from './components/templates-page/templates-comp';
 
 export const App: React.FC = () => {
     return (
@@ -24,7 +24,7 @@ export const App: React.FC = () => {
                 <Route path="/templates/:cid/end">
                     <Templates />
                 </Route>    
-                <Route path="/templates/:cid">
+                <Route path="/categories/:cid">
                     <SubCategorie />
                 </Route>
                 <Route path="/info">

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { Redirect, useRouteMatch } from 'react-router-dom'
 
 interface Icategories {
@@ -11,9 +11,9 @@ export const MainCategories: React.FC = () => {
     const [categories, setCategories] = useState<Icategories[]>([])
     const [renderTemplates, setRenderTemplates] = useState(false)
     const [renderSubCategories, setRenderSubCategories] = useState(false)  
-    const [cid, setCid] = useState("")
     const [categorie, setCategorie] = useState("")
     const { url } = useRouteMatch()
+    const categorieId = useRef("")
 
     useEffect(() => {
         loadMainCategories()
@@ -38,23 +38,23 @@ export const MainCategories: React.FC = () => {
 
     const choiceCategorie = ({ end, cid, categorie_name }: Icategories): void => {
         if (end === true) { 
-            setCid(cid)
+            categorieId.current = cid
             setCategorie(categorie_name)
             setRenderTemplates(true)
         } else {
-            // render sub-categories
+            setRenderSubCategories(true)
         }
     }
 
     if (renderSubCategories) {
         return (
-            <div> render sub categorie </div>
+            <Redirect to={`/categoriescd /${categorieId.current}`} />
         )
     }
 
     if (renderTemplates) {
         return (
-            <Redirect to={`${url}/${cid}/end`} />
+            <Redirect to={`${url}/${categorieId.current}/end`} />
         )
     }
 
@@ -62,7 +62,8 @@ export const MainCategories: React.FC = () => {
         <main>
             { categories.map(item => {
                 return (
-                    <div onClick={() => choiceCategorie(item)} key={item.cid}>
+                    <div onClick={() => choiceCategorie(item)} 
+                    key={item.cid}>
                         <p>{ item.categorie_name }</p>
                     </div>
                 )
@@ -70,3 +71,5 @@ export const MainCategories: React.FC = () => {
         </main>
     )
 }
+
+

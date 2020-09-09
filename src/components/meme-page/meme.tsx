@@ -40,28 +40,22 @@ export const Meme: React.FC<Iprop> = ({ url, mid }) => {
 
     if (open) {
         return (
-            <Fragment>
-                <section id="meme">
-                    <div id="inner">
-                        <div>
-                            <button onClick={() => setOpen(false)}> 
-                                close 
-                            </button>
-                        </div>
-                        <img 
-                            src={url} alt="meme" key={mid}
-                            id="popImg"
-                        />
-                        <section>
-                            <button onClick={updateDownloadCount}> 
-                                <a href={url} target="_self"> 
-                                    download 
-                                </a> 
-                            </button>    
-                        </section>
-                    </div>
-                </section>
-            </Fragment>
+            <div id="meme">
+                <div id="inner">
+                    <button onClick={() => setOpen(false)}> 
+                        close 
+                    </button>
+                    <img 
+                        src={url} alt="meme" key={mid}
+                        id="popImg"
+                    />
+                    <button onClick={updateDownloadCount}> 
+                        <a href={url} target="_self"> 
+                            download 
+                        </a> 
+                    </button>    
+                </div>
+            </div>
         )
     }
 
