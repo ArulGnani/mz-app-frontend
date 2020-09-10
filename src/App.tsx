@@ -24,7 +24,7 @@ export const App: React.FC = () => {
                 <Route path="/templates/:cid/end">
                     <Templates />
                 </Route>    
-                <Route path="/categories/:cid">
+                <Route path="/templates/:pid">
                     <SubCategorie />
                 </Route>
                 <Route path="/info">

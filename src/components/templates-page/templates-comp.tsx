@@ -53,7 +53,7 @@ export const Templates: React.FC = () => {
 
                 if (data.length === 0) {
                     noTemplates.current = true
-                    alert("that all the templates we have right now!...")
+                    alert("that's all the templates we have right now!...")
                 }  
                 
                 setTemplates(existringTemplates => [...existringTemplates, ...data])

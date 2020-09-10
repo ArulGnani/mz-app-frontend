@@ -13,7 +13,8 @@ export const MainCategories: React.FC = () => {
     const [renderSubCategories, setRenderSubCategories] = useState(false)  
     const [categorie, setCategorie] = useState("")
     const { url } = useRouteMatch()
-    const categorieId = useRef("")
+    // const categorieId = useRef("")
+    const [categorieId, setCategorieId] = useState("")
 
     useEffect(() => {
         loadMainCategories()
@@ -38,23 +39,26 @@ export const MainCategories: React.FC = () => {
 
     const choiceCategorie = ({ end, cid, categorie_name }: Icategories): void => {
         if (end === true) { 
-            categorieId.current = cid
+            // categorieId.current = cid
+            setCategorieId(cid)
             setCategorie(categorie_name)
             setRenderTemplates(true)
         } else {
+            // categorieId.current = cid
+            setCategorieId(cid)
             setRenderSubCategories(true)
         }
     }
 
     if (renderSubCategories) {
         return (
-            <Redirect to={`/categoriescd /${categorieId.current}`} />
+            <Redirect to={`/templates/${categorieId}`} />
         )
     }
 
     if (renderTemplates) {
         return (
-            <Redirect to={`${url}/${categorieId.current}/end`} />
+            <Redirect to={`${url}/${categorieId}/end`} />
         )
     }
 
