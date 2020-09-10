@@ -42,14 +42,16 @@ export const Meme: React.FC<Iprop> = ({ url, mid }) => {
         return (
             <div id="meme">
                 <div id="inner">
-                    <button onClick={() => setOpen(false)}> 
+                    <button onClick={() => setOpen(false)}
+                        id="close-btn"> 
                         close 
                     </button>
                     <img 
                         src={url} alt="meme" key={mid}
                         id="popImg"
                     />
-                    <button onClick={updateDownloadCount}> 
+                    <button onClick={updateDownloadCount}
+                        id="download-btn"> 
                         <a href={url} target="_self"> 
                             download 
                         </a> 
@@ -63,8 +65,8 @@ export const Meme: React.FC<Iprop> = ({ url, mid }) => {
         <React.Fragment> 
             <img 
                 src={url} alt="meme" key={mid}
-                width="300px" height="200px"
                 onClick={() => setOpen(true)}
+                id="meme-img"
             />
         </React.Fragment>
     )

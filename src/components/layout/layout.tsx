@@ -9,7 +9,7 @@ type Iprops = {
 
 export const Layout: React.FC<Iprops> = ({ body }: Iprops) => {
     return (
-        <main>
+        <main id="layout">
             <Header/>
                 <section id="body">
                     { body }

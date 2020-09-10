@@ -2,6 +2,11 @@
 #memes-comp {
     min-height: 100px;
     border: 2px solid salmon;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 7px;
 }
 
 #loading {
@@ -9,4 +14,11 @@
     font-size: 20px;
     border: 2px solid gold;
     text-align: center;
+}
+
+#meme-comp {
+    border: 2px solid blue;
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
 }
