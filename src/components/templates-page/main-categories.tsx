@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { Redirect, useRouteMatch } from 'react-router-dom'
+import './style/main-categories.css'
 
 interface Icategories {
     cid: string;
@@ -11,9 +12,7 @@ export const MainCategories: React.FC = () => {
     const [categories, setCategories] = useState<Icategories[]>([])
     const [renderTemplates, setRenderTemplates] = useState(false)
     const [renderSubCategories, setRenderSubCategories] = useState(false)  
-    const [categorie, setCategorie] = useState("")
     const { url } = useRouteMatch()
-    // const categorieId = useRef("")
     const [categorieId, setCategorieId] = useState("")
 
     useEffect(() => {
@@ -39,9 +38,7 @@ export const MainCategories: React.FC = () => {
 
     const choiceCategorie = ({ end, cid, categorie_name }: Icategories): void => {
         if (end === true) { 
-            // categorieId.current = cid
             setCategorieId(cid)
-            setCategorie(categorie_name)
             setRenderTemplates(true)
         } else {
             // categorieId.current = cid
@@ -63,16 +60,16 @@ export const MainCategories: React.FC = () => {
     }
 
     return (
-        <main>
+        <section id="temaplte-page">
             { categories.map(item => {
                 return (
                     <div onClick={() => choiceCategorie(item)} 
-                    key={item.cid}>
+                        key={item.cid} id="main-categorie">
                         <p>{ item.categorie_name }</p>
                     </div>
                 )
             })}
-        </main>
+        </section>
     )
 }
 

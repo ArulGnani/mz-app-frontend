@@ -47,7 +47,6 @@ export const Template: React.FC<Iprops> = ({ tid, url }) => {
                     </button>
                     <img
                         src={url} alt="templates" 
-                        width="300px" height="200px"
                     />
                     <button onClick={() => updateDownLoadCount()}>
                         <a href={url} target="_self">
@@ -63,8 +62,8 @@ export const Template: React.FC<Iprops> = ({ tid, url }) => {
         <React.Fragment>
             <img
                 src={url} alt="templates" 
-                width="300px" height="200px"
                 onClick={() => setOpenTemplate(true)}
+                id="template-img"
             />
         </React.Fragment>
     )

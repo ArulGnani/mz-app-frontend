@@ -68,12 +68,12 @@ export const Templates: React.FC = () => {
     
     return (
         <Layout body= {
-            <React.Fragment>
+            <section id="tempalets">
 
                 { templates.map((template, tIdx) => {
                     return (
                         <div ref={ tIdx + 1 === templates.length ? lastTemplateRef : null }
-                            key={tIdx}
+                            key={tIdx} id="template-div"
                         >
                             <Template tid={template.tid} url={template.url}/>
                         </div>
@@ -82,7 +82,7 @@ export const Templates: React.FC = () => {
 
                 { loading ? <div id="loading"> loading... </div> : null }
  
-            </React.Fragment>
+            </section>
         }/>
     )
 } 

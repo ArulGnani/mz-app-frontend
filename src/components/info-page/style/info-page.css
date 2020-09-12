@@ -1,0 +1,30 @@
+
+
+#info-page {
+    border: 2px springgreen solid;
+    margin: 5px;
+    margin-top: 10px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+#info-page div {
+    border: 2px solid violet;
+    margin: 5px;
+    width: 90%;
+    padding: 5px;
+}
+
+
+
+#logo-div {
+    border: 2px solid aqua;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+}

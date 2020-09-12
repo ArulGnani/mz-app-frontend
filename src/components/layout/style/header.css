@@ -9,3 +9,9 @@ header {
     background: rgb(241, 193, 89);
 
 }
+
+@media screen and (max-width: 600px) {
+    header {
+        width: 100%;
+    }
+}

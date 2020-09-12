@@ -58,19 +58,19 @@ export const SubCategorie: React.FC = () => {
 
     return (
         <Layout body={
-            <React.Fragment>
+            <section id="sub-categorie">
                 { loading ? <p id="loading"> loading... </p> : null }
 
                 { categories.map(categorie => {
                     return (
                         <div onClick={() => openCategories(categorie)}
-                            key={categorie.cid}>
+                            key={categorie.cid} id="main-categorie">
                             <p>{ categorie.categorie_name }</p>
                         </div>
                     )
                 }) }
 
-            </React.Fragment>
+            </section>
         }/>
     )
 }

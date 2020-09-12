@@ -10,7 +10,7 @@ import { Meme } from './meme'
 export const MemeComp: React.FC = () => {
     const [state, dispatch] = useReducer(reducer, initState)
     const [memes, setMemes] = useState<ImemePage[]>([])
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
     const end = useRef(false)
     
     const observer = useRef<IntersectionObserver>()
@@ -120,7 +120,11 @@ export const MemeComp: React.FC = () => {
                     </div>
                 ) 
             })}
-            { loading ? <div id="loading"> loading... </div> : null }
+            { loading ? 
+                <div id="loading-comp"> 
+                    <span id="loading"></span>
+                    <p> hang on we r loading... </p> 
+                </div> : null }
         </section>
     )
 }

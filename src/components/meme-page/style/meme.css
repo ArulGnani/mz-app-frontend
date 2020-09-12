@@ -51,3 +51,42 @@
     text-decoration: none;
     color: black;
 }
+
+
+#meme-img { 
+    width: 400px;
+    height: 320px;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    #meme {
+    
+    }
+
+    #inner {
+        border: 1px solid brown;
+        left: 0;
+        top: 15px;
+        width: 90vw;
+        min-height: 90vh;
+        background: black;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #popImg {
+        width: 300px;
+        height: 320px;
+    }
+    
+
+
+    #meme-img {
+        width: 100%;
+        height: auto;
+        border: 2px solid forestgreen;
+    }
+
+}

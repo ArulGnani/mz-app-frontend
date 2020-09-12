@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Redirect, useRouteMatch } from 'react-router-dom'
 import './style/navbar.css'
+import infoIcon from './asserts/info.png'
 
 export const NavBar: React.FC =  () => {
     const [memesPage, toMemesPage] = useState(false)
@@ -19,13 +20,13 @@ export const NavBar: React.FC =  () => {
             <nav>
                 <ul>
                     <li onClick={() => toMemesPage(true)}> 
-                        memes 
+                        <p> meme </p> 
                     </li>
                     <li onClick={() => toTemplatesPage(true)}>
-                        templates 
+                        <p> templates </p> 
                     </li>
                     <li onClick={() => toInfoPage(true)}>
-                        info     
+                        <img src={infoIcon} alt="info" />     
                     </li> 
                 </ul>
             </nav>
